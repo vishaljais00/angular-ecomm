@@ -1,0 +1,66 @@
+{
+  "seller": [
+    {
+      "username": "demo",
+      "email": "demo@gmail.com",
+      "password": "12345",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "product_name": "I phone 11",
+      "product_price": "12312",
+      "product_color": "jet black",
+      "category": "jet black",
+      "description": "11 yellow",
+      "product_url": "https://www.apple.com/v/iphone-11-pro/c/images/meta/og__smc3haxsdn2q_overview.png?202004281406",
+      "id": 4
+    },
+    {
+      "product_name": "Asus",
+      "product_price": "82000",
+      "product_color": "blue",
+      "category": "laptop",
+      "description": "82 asus",
+      "product_url": "https://sm.mashable.com/t/mashable_in/photo/default/asus19_skk3.1920.jpg",
+      "id": 5
+    },
+    {
+      "product_name": "Asus 2",
+      "product_price": "123123",
+      "product_color": "blue",
+      "category": "laptop",
+      "description": "laptop black",
+      "product_url": "https://trendingnewsbuzz.com/wp-content/uploads/2020/09/asus-rog-strix.jpg",
+      "id": 6
+    },
+    {
+      "product_name": "Nike Shoes",
+      "product_price": 7200,
+      "product_color": "blue",
+      "category": "Shoes",
+      "description": "Blue nike shoes",
+      "product_url": "https://th.bing.com/th/id/OIP.ZL2W-BoL3R6opS4LaYHU-QHaHa?pid=ImgDet&rs=1",
+      "id": 7
+    },
+    {
+      "product_name": "Targus Bag",
+      "product_price": 3500,
+      "product_color": "black",
+      "category": "Bag",
+      "description": "laptop bag",
+      "product_url": "https://rukminim1.flixcart.com/image/1408/1408/laptop-bag/g/r/9/tsb705ap-50-targus-laptop-backpack-legend-notebook-iq-original-imadp6h6zenqvmgw.jpeg?q=90",
+      "id": 8
+    },
+    {
+      "product_name": "Denim Jeans",
+      "product_price": 2200,
+      "product_color": "Blue",
+      "category": "Jeans",
+      "description": "Levi Denim Blue jeans",
+      "product_url": "https://media.missguided.com/s/missguided/G1806116_set/3/light-blue-sinner-ripped-knee-skinny-denim-jeans.jpg",
+      "id": 9
+    }
+  ]
+}
