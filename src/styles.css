@@ -25,6 +25,7 @@ body{
 .form-button{
     height: 35px;
     border: 1px solid blueviolet ;
+    color: blueviolet;
     cursor: pointer;
 }
 

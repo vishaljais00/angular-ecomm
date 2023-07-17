@@ -53,4 +53,14 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
   }
+
+  submitSearch(query: string){
+    this.serachResult = []
+    this.router.navigate([`home-search/${query}`])
+  }
+
+  clickSerach(productID: number){
+    this.serachResult = []
+    this.router.navigate([`details/${productID}`])
+  }
 }

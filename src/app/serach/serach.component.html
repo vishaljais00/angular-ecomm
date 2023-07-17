@@ -1,1 +1,21 @@
-<p>serach works!</p>
+<div *ngIf="searchedData.length>0">
+    <div class="row search-item" *ngFor="let item of searchedData" >
+        <div class="col-sm-3">
+            <a routerLink="/details/{{item.id}}" >
+                <img class="search-image" [src]="item.product_url" alt="image">
+            </a>
+        </div>
+        <div class="col-sm-8 details">
+            <a routerLink="/details/{{item.id}}"> <h6> {{item.product_name}}</h6> </a>
+            <p><b>price: </b>  {{item.product_price}}</p>
+            <p><span><b>color:</b> </span>  {{item.product_color}} <span><b>category:</b> </span> {{item.category}}</p>
+            <p><b>about:</b>  {{item.description}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="searchedData.length==0">
+    <p>No Data Found</p>
+</div>
+
+
+

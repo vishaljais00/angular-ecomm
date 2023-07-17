@@ -1,11 +1,11 @@
 <nav class="nav">
     <h1><a routerLink="/">E-COMM</a></h1>
     <div *ngIf="menuType === 'default';" class="nav-search">
-        <input type="text" (keyup)="searchProduct($event)" placeholder="search for products" />
-        <button>Search</button>
+        <input #searchInput type="text" (keyup)="searchProduct($event)" placeholder="search for products" />
+        <button (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="serachResult.length > 0">
             <li *ngFor="let item of serachResult ">
-                <a>{{item.product_name}}</a>
+                <a (click)="clickSerach(item.id)">{{item.product_name}}</a>
             </li>
         </ul>
     </div>
@@ -18,7 +18,7 @@
                 <a routerLink="">Home</a>
             </li>
             <li>
-                <a href="#">Login</a>
+                <a routerLink="/user-auth">Login/signup</a>
             </li>
             <li>
                 <a href="#">Cart(0)</a>
