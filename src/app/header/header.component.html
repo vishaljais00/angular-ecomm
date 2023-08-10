@@ -1,6 +1,6 @@
 <nav class="nav">
     <h1><a routerLink="/">E-COMM</a></h1>
-    <div *ngIf="menuType === 'default';" class="nav-search">
+    <div *ngIf="menuType === 'default'||'user'" class="nav-search">
         <input #searchInput type="text" (keyup)="searchProduct($event)" placeholder="search for products" />
         <button (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="serachResult.length > 0">
@@ -21,7 +21,7 @@
                 <a routerLink="/user-auth">Login/signup</a>
             </li>
             <li>
-                <a href="#">Cart(0)</a>
+                <a href="#">Cart({{cartItem}})</a>
             </li>
         </ul>
 
@@ -33,10 +33,28 @@
                 <a routerLink="seller-home"> List</a>
             </li>
             <li>
-                <a (click)="logout()">Logout</a>
+                <a (click)="logout('seller')">Logout</a>
             </li>
             <li>
                 <a routerLink="/">{{sellerName == ''? "Seller Name": sellerName | titlecase }}</a>
+            </li>
+        </ul>
+
+        <ul *ngSwitchCase="'user'">
+            <li>
+                <a routerLink="seller-auth">Seller</a>
+            </li>
+            <li>
+                <a routerLink="">Home</a>
+            </li>
+            <li>
+                <a routerLink="">{{userName}}</a>
+            </li>
+            <li>
+                <a (click)="logout('user')">Logout</a>
+            </li>
+            <li>
+                <a href="#">Cart({{cartItem}})</a>
             </li>
         </ul>
     </div>

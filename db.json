@@ -64,6 +64,109 @@
     }
   ],
   "users": [
-    
+    {
+      "username": "anil",
+      "email": "anil@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "username": "peter",
+      "email": "peter@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "username": "nva",
+      "email": "nva@gmail.com",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "username": "kavita",
+      "email": "kavi@gmail.com",
+      "password": "12345",
+      "id": 6
+    }
+  ],
+  "cart": [
+    {
+      "product_name": "Asus 2",
+      "product_price": "123123",
+      "product_color": "blue",
+      "category": "laptop",
+      "description": "laptop black",
+      "product_url": "https://trendingnewsbuzz.com/wp-content/uploads/2020/09/asus-rog-strix.jpg",
+      "quantity": 1,
+      "productId": 6,
+      "userId": 5,
+      "id": 1
+    },
+    {
+      "product_name": "Nike Shoes",
+      "product_price": 7200,
+      "product_color": "blue",
+      "category": "Shoes",
+      "description": "Blue nike shoes",
+      "product_url": "https://th.bing.com/th/id/OIP.ZL2W-BoL3R6opS4LaYHU-QHaHa?pid=ImgDet&rs=1",
+      "quantity": 12,
+      "productId": 7,
+      "userId": 5,
+      "id": 2
+    },
+    {
+      "product_name": "Targus Bag",
+      "product_price": 3500,
+      "product_color": "black",
+      "category": "Bag",
+      "description": "laptop bag",
+      "product_url": "https://rukminim1.flixcart.com/image/1408/1408/laptop-bag/g/r/9/tsb705ap-50-targus-laptop-backpack-legend-notebook-iq-original-imadp6h6zenqvmgw.jpeg?q=90",
+      "quantity": 3,
+      "productId": 8,
+      "userId": 5,
+      "id": 3
+    },
+    {
+      "product_name": "I phone 11",
+      "product_price": "12312",
+      "product_color": "jet black",
+      "category": "jet black",
+      "description": "11 yellow",
+      "product_url": "https://www.apple.com/v/iphone-11-pro/c/images/meta/og__smc3haxsdn2q_overview.png?202004281406",
+      "quantity": 4,
+      "productId": 4,
+      "userId": 5,
+      "id": 4
+    },
+    {
+      "product_name": "Denim Jeans",
+      "product_price": 2200,
+      "product_color": "Blue",
+      "category": "Jeans",
+      "description": "Levi Denim Blue jeans",
+      "product_url": "https://media.missguided.com/s/missguided/G1806116_set/3/light-blue-sinner-ripped-knee-skinny-denim-jeans.jpg",
+      "quantity": 16,
+      "productId": 9,
+      "userId": 5,
+      "id": 5
+    },
+    {
+      "product_name": "Asus",
+      "product_price": "82000",
+      "product_color": "blue",
+      "category": "laptop",
+      "description": "82 asus",
+      "product_url": "https://sm.mashable.com/t/mashable_in/photo/default/asus19_skk3.1920.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "userId": 5,
+      "id": 6
+    }
   ]
 }

@@ -1,13 +1,13 @@
-export interface Signup{
+
+export interface UserSignup{
     username: string ,
     email: string,
     password: string,
     
 }
 
-export interface Login{
+export interface UserLogin{
     email: string,
     password: string,
-    username: string 
     
 }

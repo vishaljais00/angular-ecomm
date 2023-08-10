@@ -1,28 +1,51 @@
 <div class="user-auth">
-    <div class="signup">
-        <h1>User Signup</h1>
+    <div class="signup" *ngIf="!loginON;">
+        <h1> User Signup</h1>
         <form #userSignup="ngForm" class="common-form" (ngSubmit)="signup(userSignup.value)">
             <input 
                 type="text" class="form-input" 
-                placeholder="enter name" name="user_name"
+                placeholder="enter name" name="username"
                 ngModel
             />
     
             <input 
                 type="email" class="form-input" 
-                placeholder="enter user email" name="user_email"
-                ngModel
+                placeholder="enter user email" name="email"
+                ngModel 
             />
-    
+           
             <input 
                 type="password" class="form-input" 
-                placeholder="enter password" name="user_password"
+                placeholder="enter password" name="password"
                 ngModel
             />
-    
             <button class="form-button">Sign-Up</button>
+            <a class="auth-toggle-link" (click) = "loginOpen()"> Already Have Account ? Click Login</a>
         </form>
     </div>
-  
+    <div class="signin" *ngIf="loginON;">
+        <div class="signup">
+            <h1>User Signin</h1>
+            <p class="errorLogin" *ngIf="loginError">
+                Email or password not valid
+            </p>
+            <form #userSignin="ngForm" class="common-form" (ngSubmit)="signin(userSignin.value)">
+                <input 
+                    type="email" class="form-input" 
+                    placeholder="enter user email" name="email"
+                    ngModel #email="ngModel" required email
+                />
+                <p class="invalid-input" *ngIf="email.invalid && email.touched"><span>please enter valid email</span></p>
+                <input 
+                    type="password" class="form-input" 
+                    placeholder="enter password" name="password"
+                    ngModel #password="ngModel" required minlength="2" maxlength="20"
+                />
+                <p class="invalid-input" *ngIf="password.invalid && password.touched"><span>please enter valid password</span></p>
+                <button [disabled]="userSignin.invalid" class="form-button">Sign-In</button>
+                <a class="auth-toggle-link" (click) = "loginOpen()"> Don't Have An Account ? Click SignUp </a>
+            </form>
+        </div>
+    </div>
    
 </div>

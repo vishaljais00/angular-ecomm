@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SerachComponent } from './serach/serach.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SellerUpdateProductComponent,
     SerachComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

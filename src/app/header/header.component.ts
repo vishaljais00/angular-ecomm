@@ -16,9 +16,10 @@ export class HeaderComponent implements OnInit {
 
   menuType: string = '';
   sellerName: string = '';
-  serachResult: product[] = []
-
-  ngOnInit():void{
+  serachResult: product[] = [];
+  userName: string = '';
+  cartItem: number = 0;
+  ngOnInit():void {
     this.router.events.subscribe((value: any)=>{
       if(value.url){
         if(localStorage.getItem('seller') && value.url.includes('seller')){
@@ -26,10 +27,26 @@ export class HeaderComponent implements OnInit {
           let sellerStore = localStorage.getItem('seller')
           let sellerData = sellerStore && JSON.parse(sellerStore)[0]
           this.sellerName = sellerData.username
-        }else{
+        }else if(localStorage.getItem('user')){
+          let userStore = localStorage.getItem('user')
+          let userData = userStore && JSON.parse(userStore)
+          this.userName = userData.username
+          this.menuType = 'user';
+         
+        }  else{
           this.menuType = 'default'
         }
       }
+    })
+
+    let cartData = localStorage.getItem('localCart')
+    if(cartData){
+      this.cartItem = JSON.parse(cartData).length
+    }
+
+
+    this.product.cartData.subscribe((data)=>{
+      this.cartItem = data.length
     })
   }
 
@@ -49,9 +66,11 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  logout() {
-    localStorage.removeItem('seller')
-    this.router.navigate(['/'])
+  logout(type: string) {
+
+    type == 'seller'? localStorage.removeItem('seller') : localStorage.removeItem('user')
+    type == 'seller'? this.router.navigate(['/']) : this.router.navigate(['/user-auth'])
+    
   }
 
   submitSearch(query: string){
